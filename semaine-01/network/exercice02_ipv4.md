@@ -25,6 +25,15 @@ Adresse IP : 192.168.1.25/24
 Adresse IP : 172.16.10.130/26
 
 Détermine les mêmes éléments que dans l'exercice 1.
+
+### Reponses :
+1. 255.255.255.192
+2. 172.16.10.128/26
+3. 172.16.10.191/26
+4. 172.16.10.129/26
+5. 172.16.10.190/26
+6. 64
+7. 62 
 ## Exercice 3
 Adresse IP : 192.168.50.75/28
 
@@ -34,6 +43,13 @@ Détermine :
 3. Le broadcast.
 4. La plage d'adresses utilisables.
 5. Le nombre d'hôtes utilisables.
+
+### Reponses :
+1. 255.255.255.240
+2. 192.168.50.64/28
+3. 192.168.50.79/28
+4. 192.168.50.65 -> 192.168.50.78
+5. 14
 # Série 2 — Approfondissement ◆
 ## Exercice 4
 Adresse IP : 10.0.5.200/20
@@ -45,6 +61,13 @@ Détermine :
 - La plage utilisable.
 - Le nombre d'hôtes utilisables.
 Attention : le préfixe /20 ne correspond pas à un découpage classique sur un seul octet.
+### Reponses :
+- 255.255.240.0
+
+- 10.0.0.0/20
+- 10.0.15.255/30
+- 10.0.0.1/20 - 10.0.15.254/20
+- 4094
 ## Exercice 5
 Tu disposes du réseau :
 
@@ -58,6 +81,9 @@ Pour chaque sous-réseau, détermine :
 - L'adresse de broadcast.
 - La plage d'adresses utilisables.
 - Le nombre d'hôtes utilisables.
+### Reponses
+La division en 4 sous reseau inclu de trouver le nouveau prefixe on a 2^n >= 4 (=) n>=2 on va prendre 2 le nouveau prefixe sera de 24+2=26
+
 ## Exercice 6
 Tu disposes du réseau :
 
