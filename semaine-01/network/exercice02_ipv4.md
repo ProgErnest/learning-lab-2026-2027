@@ -65,7 +65,7 @@ Attention : le préfixe /20 ne correspond pas à un découpage classique sur un 
 - 255.255.240.0
 
 - 10.0.0.0/20
-- 10.0.15.255/30
+- 10.0.15.255/20
 - 10.0.0.1/20 - 10.0.15.254/20
 - 4094
 ## Exercice 5
@@ -95,13 +95,13 @@ La division en 4 sous reseau inclu de trouver le nouveau prefixe on a 2^n >= 4 (
 - 192.168.10.127/26
 - 192.168.10.65/26 -> 192.168.10.126/26
 - 62
-1. Reseau A :
+3. Reseau C :
 - 192.168.10.128/26
 - 255.255.255.192/26
 - 192.168.10.191/26
 - 192.168.10.129/26 -> 192.168.10.190/26
 - 62
-1. Reseau A :
+4. Reseau D :
 - 192.168.10.192/26
 - 255.255.255.192/26
 - 192.168.10.255/26
@@ -123,8 +123,41 @@ Justifie l'ordre d'attribution des sous-réseaux et vérifie qu'il n'existe aucu
 ### Reponses
 Selon l'enonce les reseau sont deja classe du plus grand au plus petit donc oncommence par le reseau A.
 1. Reseau A :
-cherchons le prefixe : 2^n>=100 n>=7 le prefixe sera de 32-7=25 on a deux sous reseaux
-Sous reseau A :
+cherchons le prefixe : 2^n>=100 n>=7 car 2^7=128>=100le prefixe sera de 32-7=25 on a deux sous reseaux
+Sous reseau A : 
+- Adresse reseau : 192.168.20.0/25
+- Masque : 255.255.255.128/25
+- Broadcast : 192.168.20.127/25
+- plage utilisable : 192.168.20.1/25 -> 192.168.20.126/25
+- 126
+NB : Le VLSM favorisant l'economie des adresse on va utiliser pour le prochain reseau l'adresse 192.168.20.128/25 car 126-100=26<50
+2. Reseau B :
+cherchons le prefixe : 2^n>=50 n>=6 car 2^6=64>=50 le prefixe sera de 32-6=26 on a 4 sous reseaux donc deux impossibles a utiliser donc il en reste 2
+Sous reseau B : 
+- Adresse reseau : 192.168.20.128/26
+- Masque : 255.255.255.192/26
+- Broadcast : 192.168.20.191/26
+- plage utilisable : 192.168.20.129/26 -> 192.168.20.190/26
+- 62
+NB : Le VLSM favorisant l'economie des adresse on va utiliser pour le prochain reseau l'adresse 192.168.20.192/26 car 62-50=12<25
+3. Reseau C :
+cherchons le prefixe : 2^n>=25 n>=5 car 2^5=32>=25 le prefixe sera de 32-5=27 on a 8 sous reseaux donc 6 impossibles a utiliser donc il en reste 2
+Sous reseau C : 
+- Adresse reseau : 192.168.20.192/27
+- Masque : 255.255.255.224/27
+- Broadcast : 192.168.20.223/27
+- plage utilisable : 192.168.20.193/27 -> 192.168.20.222/27
+- 30
+NB : Le VLSM favorisant l'economie des adresse on va utiliser pour le prochain reseau l'adresse 192.168.20.224/27 car 30-25=5<10
+4. Reseau D :
+cherchons le prefixe : 2^n>=10 n>=4 car 2^4=16>=10 le prefixe sera de 32-4=28 on a 16 sous reseaux donc 14 impossibles a utiliser donc il en reste 2
+Sous reseau D : 
+- Adresse reseau : 192.168.20.224/28
+- Masque : 255.255.255.240/28
+- Broadcast : 192.168.20.239/28
+- plage utilisable : 192.168.20.225/28 -> 192.168.20.238/28
+- 14
+NB : Le VLSM favorisant l'economie des adresse on va utiliser pour le prochain reseau l'adresse 192.168.20.224/27 car 30-25=5<10
 # Série 3 — Mise en situation ◆
 ## Exercice 7 — Diagnostic réseau
 Un administrateur configure deux machines :
