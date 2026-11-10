@@ -171,6 +171,11 @@ Questions :
 2. Peuvent-elles communiquer directement au niveau IP sans routeur ?
 3. Quel équipement ou mécanisme permettrait leur communication ?
 4. Que se passerait-il si PC-A avait plutôt le masque 255.255.0.0 ?
+### Reponses :
+1. Non
+2. Non
+3. Un routeur ou switch de niveau 3
+4. cela aurait le meme effet
 ## Exercice 8 — Détection d'une mauvaise configuration
 Un réseau utilise :
 - Adresse réseau : 192.168.30.0/27
@@ -183,3 +188,8 @@ Identifie :
 2. Les adresses incorrectes.
 3. Le problème éventuel concernant la passerelle.
 4. Les corrections nécessaires.
+### Reponse :
+1. 192.168.30.10/27, 192.168.30.20/27
+2. 192.168.30.35/27 , 192.168.30.31/27
+3. Ils n'appartiennent pas aux memes sous-reseau avec la passerelle et donc impossible d de se connecter a d'aures reseaux
+4. changer la passerele a 192.168.30.30/27
