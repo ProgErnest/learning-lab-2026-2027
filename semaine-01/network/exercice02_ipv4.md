@@ -83,7 +83,30 @@ Pour chaque sous-réseau, détermine :
 - Le nombre d'hôtes utilisables.
 ### Reponses
 La division en 4 sous reseau inclu de trouver le nouveau prefixe on a 2^n >= 4 (=) n>=2 on va prendre 2 le nouveau prefixe sera de 24+2=26
-
+1. Reseau A :
+- 192.168.10.0/26
+- 255.255.255.192/26
+- 192.168.10.63/26
+- 192.168.10.1/26 -> 192.168.10.62/26
+- 62
+2. Reseau B :
+- 192.168.10.64/26
+- 255.255.255.192/26
+- 192.168.10.127/26
+- 192.168.10.65/26 -> 192.168.10.126/26
+- 62
+1. Reseau A :
+- 192.168.10.128/26
+- 255.255.255.192/26
+- 192.168.10.191/26
+- 192.168.10.129/26 -> 192.168.10.190/26
+- 62
+1. Reseau A :
+- 192.168.10.192/26
+- 255.255.255.192/26
+- 192.168.10.255/26
+- 192.168.10.193/26 -> 192.168.10.254/26
+- 62
 ## Exercice 6
 Tu disposes du réseau :
 
@@ -97,6 +120,11 @@ Tu dois créer des sous-réseaux capables d'accueillir respectivement :
 Trouve un plan d'adressage adapté en utilisant le VLSM (Variable Length Subnet Mask).
 
 Justifie l'ordre d'attribution des sous-réseaux et vérifie qu'il n'existe aucun chevauchement.
+### Reponses
+Selon l'enonce les reseau sont deja classe du plus grand au plus petit donc oncommence par le reseau A.
+1. Reseau A :
+cherchons le prefixe : 2^n>=100 n>=7 le prefixe sera de 32-7=25 on a deux sous reseaux
+Sous reseau A :
 # Série 3 — Mise en situation ◆
 ## Exercice 7 — Diagnostic réseau
 Un administrateur configure deux machines :
