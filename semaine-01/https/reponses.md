@@ -150,3 +150,8 @@ Dans le CLientHello,on a :
     - Le certificat de compression
 
 Dans le serverHello la reponse du serveur a ce client Heloo avec la certification. VUe qu'on est en TLS1.3 il est donc impossible de discerner les informations du certificat qui est chiffre mais on peut neanmoins avoir le type SeverHello, la version TLS et bien d'autres
+
+Exercice 25 :
+MITM : Man in the Middle est une attaque courante  utilisat comme son nom l'indique la position d'intermediaire pour controler, espioner de maniere illegitime le trffic dans un reseau en se faisant passer pour une autre personne ou terminal ou meme en nuisant les communication
+Pour proteger contre cela on a donc adopte des mecanismes d'authentification des serveus via des certification tls pour garantir l'integrite du serveur
+SOn implementation en plus necessite du PFS pour changer le cle achaque session via des cle Ephemere empechant a un attaquant de lire des conversations precedentes en cas d'acces a la cle prive de l'une des parties
