@@ -136,3 +136,17 @@ Transport Layer Security
 
 Une negociation TLS1.3 se fait en poignee de main CLientHello et ServerHello
 Dans le CLientHello,on a :
+- La version du protocole : TLSv1.3
+- Le type : Handshake Protocol: CLient Hello
+- La taille (Length de la requete)
+- La version supportee 1.2
+- L'identifiant de session
+- La liste des algorithmes de chiffrements supportees : Cipher SUites
+- Les Methodes de decompression compatibles
+- Les extensions qui presente tout ce que le client sait faire ou peut faire en matiere de cryptographie tels que :
+    - Le nom du serveur ici ab.chatgpt.com
+    - Les versions supportees : 1.3 et 1.2 
+    - La version chiffree du client Hello empechant un tier, un intermediaire de savoir le domaine precis visite
+    - Le certificat de compression
+
+Dans le serverHello la reponse du serveur a ce client Heloo avec la certification. VUe qu'on est en TLS1.3 il est donc impossible de discerner les informations du certificat qui est chiffre mais on peut neanmoins avoir le type SeverHello, la version TLS et bien d'autres
