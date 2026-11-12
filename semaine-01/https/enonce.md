@@ -7,3 +7,4 @@ Objectif : comprendre ce que HTTPS protège réellement et comment la confiance 
 | EX23 | Examiner un certificat X.509, sa chaîne de confiance et son nom de domaine. | ★ | Rapport OpenSSL. |
 | EX24 | Capturer et analyser une négociation TLS 1.3 avec Wireshark. | ★ | Capture annotée du handshake. |
 | EX25 | Expliquer MITM, authentification du serveur et Perfect Forward Secrecy. | ◆ | Scénarios illustrés et analyse des protections. |
+
