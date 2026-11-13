@@ -16,3 +16,7 @@ Pour l'analyse j'ai decouvert qu'on pouvait analyser cette requete a plusieurs n
 - Au niveau du serveur DJango via ses logs qui liste les requetes recues etles codes de reponse
 
 Bref : Le client envoie une requete web que le sserveur / l'application backnd repond via http
+
+Exercice 29 : 
+Le CORS: Cross Origin ressource Sharing estt un mecanisme d'assouplissement de la barriere SOP(Same Origin Policy ) des navigateur ( le SOP empche tout site ou service A de communiquer ou d'exploiter les ressources d'un site ou service B) en permettant aux deux sites de communiquer via un mecanisme d'autorisation explicite dans les entetes http.
+Requete SImple vs Prefligth on a vu plus haut que les requetes simples  suivent un mecanism e en deux temps requete (GET ou POST) reponse du serveur en http or dans des mmecanismes plus complexes impliquants d'autres methoodes http risquees telles que PUT, PATCH ou `DELETE` ou meme des requetes en JSON Le navigateur utilise des requetes pleflight (OPTION) via la methode http OPTION pour demander au serveur s'il peut  ou s'il a l'autorisation d'executer la requete. puis le serveur repond. DNa s le ca sd'une reponse positive, le navigateur envoie maintenant la requete et dans le cas contraire il ne fait rienr
